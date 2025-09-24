@@ -3,37 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>簡易性格測驗</title>
+    <title>簡易測驗</title>
 </head>
 <body>
-    <h1>你的性格是：</h1>
-    <h2 id="result-text"></h2>
-
-    <button onclick="showResult('INFP')">我是公親</button>
-    <button onclick="showResult('ENTJ')">我是指揮官</button>
-
-    <script>
-        const personalities = {
-            "INFP": {
-                name: "公親",
-                description: "一個充滿理想與同情心的人。"
-            },
-            "ENTJ": {
-                name: "指揮官",
-                description: "一個果斷、有邏輯的領導者。"
-            }
-        };
-
-        function showResult(type) {
-            const resultElement = document.getElementById('result-text');
-            const result = personalities[type];
-            
-            if (result) {
-                resultElement.innerText = `${result.name} - ${result.description}`;
-            } else {
-                resultElement.innerText = "找不到你的性格！";
-            }
-        }
-    </script>
+    <div id="quiz-container">
+        <h1 id="question-text"></h1>
+        <div id="answer-buttons"></div>
+        <div id="result-message" style="display: none;"></div>
+    </div>
+    
+    <script src="quiz.js"></script>
 </body>
 </html>
